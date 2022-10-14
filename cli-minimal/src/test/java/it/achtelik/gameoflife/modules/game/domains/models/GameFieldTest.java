@@ -8,7 +8,7 @@ import java.util.HashSet;
 class GameFieldTest {
 
     @Test
-    public void calculateToNewGeneration() {
+    void calculateToNewGeneration() {
         var size = 3;
         var initialAliveCellPositions = new HashSet<GameCellPosition>();
         initialAliveCellPositions.add(new GameCellPosition(0, 1));
