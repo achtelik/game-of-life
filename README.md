@@ -5,4 +5,6 @@ All projects are implemented in a reusable clean architecture way.
 
 ## Implementations
 
-* **cli-minimal**: An minimal implementation with a cli interface.
+* **cli-minimal**: A minimal implementation with a cli interface.
+    * Array as game field.
+    * Boolean as cell status.
