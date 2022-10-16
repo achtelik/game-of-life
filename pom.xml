@@ -11,6 +11,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>cli-minimal</module>
+        <module>cli-array</module>
     </modules>
 </project>
