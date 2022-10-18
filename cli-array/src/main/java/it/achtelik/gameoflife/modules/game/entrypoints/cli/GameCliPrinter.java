@@ -17,7 +17,7 @@ public class GameCliPrinter {
 
     private String printOld = "";
 
-    public void printGameField(GameField gameField) {
+    void printGameField(GameField gameField) {
         StringBuilder buffer = new StringBuilder();
 
         printHorizontalBorder(gameField, buffer);
@@ -31,7 +31,7 @@ public class GameCliPrinter {
         }
     }
 
-    private void printGameFieldRows(GameField gameField, StringBuilder buffer) {
+    void printGameFieldRows(GameField gameField, StringBuilder buffer) {
         for (int rowIndex = 0; rowIndex < gameField.getSize(); rowIndex++) {
             buffer.append(CHAR_BORDER_VERTICAL);
             for (int columnIndex = 0; columnIndex < gameField.getSize(); columnIndex++) {
@@ -42,7 +42,7 @@ public class GameCliPrinter {
         }
     }
 
-    private void printHorizontalBorder(GameField gameField, StringBuilder buffer) {
+    void printHorizontalBorder(GameField gameField, StringBuilder buffer) {
         buffer.append(CHAR_BORDER_CORNER);
         buffer.append(StringUtils.repeat(CHAR_BORDER_HORIZONTAL, gameField.getSize()));
         buffer.append(CHAR_BORDER_CORNER);

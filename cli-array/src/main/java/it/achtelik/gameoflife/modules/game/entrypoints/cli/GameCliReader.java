@@ -12,7 +12,7 @@ public class GameCliReader {
     private final Scanner scanner = new Scanner(System.in);
     private final Random random = new Random();
 
-    public GameProperties readProperties() {
+    GameProperties readProperties() {
         printStream.print("""
                 Welcome to Game of Life
                 ***********************
@@ -32,7 +32,7 @@ public class GameCliReader {
         return new GameProperties(gameFieldSize, livingCells);
     }
 
-    public Set<GameCellPosition> setupLivingCellsManual() {
+    Set<GameCellPosition> setupLivingCellsManual() {
         printStream.println("Setup the initial fields. Input x-y x-y x-y ...");
         var initialCells = scanner.nextLine();
 
@@ -42,7 +42,7 @@ public class GameCliReader {
         }).collect(Collectors.toSet());
     }
 
-    public Set<GameCellPosition> setupLivingCellsRandom(int gameFieldSize) {
+    Set<GameCellPosition> setupLivingCellsRandom(int gameFieldSize) {
         printStream.printf("""
                 Living cells will be placed random.
                 Number of living cells = %s
